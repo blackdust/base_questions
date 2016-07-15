@@ -2,12 +2,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-// 不能解决重复字符问题
 
 public class Ten {
     public static void main(String args[]){
         ArrayList<String> strArray1 = new ArrayList<String> (){{add("a"); add("b");add("c");add("d");}};
-        ArrayList<String> strArray2 = new ArrayList<String> (){{add("d"); add("b");add("e");add("f");}};
+        ArrayList<String> strArray2 = new ArrayList<String> (){{add("a"); add("b");add("c");add("f");}};
         set_hash(strArray1, strArray2);
     }
 
