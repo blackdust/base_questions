@@ -39,15 +39,16 @@ def print(num ,ary)
   ary1 = ary.map do |a|
     a[0].to_s
   end
-  p num.to_s + " 分解后= "
-  p ary1
+  p num.to_s + " 分解后:"
+  str = ary1.to_s
+  p str.gsub(/,/,"x").gsub(/("|\[|\\|\])/,"").gsub(" ","")
 end
 
 def decompose(n)
   prime_number = make_prime_number(n)
   other_number = delete_prime_number(n)
   other_number.delete(1)
-  print(1, [1])
+  print(1, [1, 1])
   other_number.each do |num|
     reasult_ary = make_coupes_deal_other_number(num, [], prime_number)
     resault_ary_pick = []

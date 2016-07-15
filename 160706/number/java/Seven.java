@@ -47,16 +47,19 @@ public class Seven{
                 break;
             }
         }  
-        System.out.println(num + "--->");
-        System.out.println(pick);
+        System.out.println(num + "分解后：");
+        String str = pick.toString();
+        str = str.substring(1,str.length()-1);
+        str = str.replaceAll(",","x");
+        System.out.println(str.replaceAll(" ",""));
     }
 
     public static void decompose(int a){
         ArrayList prime  = (ArrayList) find_prime_num(a).get(0);
         ArrayList unprime  = (ArrayList) find_prime_num(a).get(1);
         ArrayList array=new ArrayList<Integer> (){{add(1); add(1);}};
-        System.out.println( 1 + "--->");
-        System.out.println(array);
+        System.out.println( 1 + "分解后：");
+        System.out.println("1x1");
         for(int i = 0; i < unprime.size(); i++){
             int num = (int) unprime.get(i);
             ArrayList result_ary =  new ArrayList();

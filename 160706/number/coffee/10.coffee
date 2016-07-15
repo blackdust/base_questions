@@ -1,6 +1,13 @@
 f = (x, y)->
   ary = []
-  for i in [x..y]
+  if (x > y)
+   max = x
+   min = y
+  else
+   max = y
+   min = x
+    
+  for i in [min..max]
     ary.push(i)
 
   for i in [ary[0]..ary[ary.length - 1]]
@@ -9,4 +16,4 @@ f = (x, y)->
        line += "x"
     console.log(line)
   
-f(4,3)
+f(3,4)
